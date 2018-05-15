@@ -1,0 +1,102 @@
+.my-card{
+  background-color: #FFF;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: $box-shadow-reg;
+  padding: $card-padding-size 0;
+
+  &__container{
+    display: flex;
+    margin: 5px 0;
+  }
+
+  &__head{
+    position: relative;
+  }
+
+  &__image{
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__tag{
+    top: 10px;
+    position: absolute;
+    background-color: $card-tag-color;
+    font-size: 75%;
+    font-weight: bold;
+    padding: 10px 20px 10px 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: $box-shadow-reg;
+  }
+
+  &__body{
+    padding: $card-padding-size;
+  }
+
+  &__title{
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  &__description{
+    padding: 0 5px;
+    color: $card-description-color;
+    font-weight: lighter;
+    font-size: 80%;
+  }
+
+  &__foot{
+    display: flex;
+    justify-content: flex-end;
+    padding: $card-padding-size;
+  }
+
+  &__action{
+    display: flex;
+    color: $card-text-color-light;
+    border: 1px solid $card-border-color-light;
+    border-radius: 50px;
+
+    &__button{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      transition: background-color 0.5s ease;
+      border-right: 1px solid $card-border-color-light;
+      font-weight: bold;
+
+      &:last-child{
+        border-right: 0;
+      }
+
+      &:hover{
+        cursor: pointer;
+        background-color: #E5E5E5;
+      }
+    }
+
+    &__icon{
+      padding: 8px 10px 8px 15px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+
+      .material-icons{
+        font-size: 100%;
+      }
+    }
+
+    &__price{
+      padding: 8px 15px 8px 10px;
+      font-size: 90%;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-left: 0;
+    }
+  }
+
+  &.space{
+    margin: 0 5px;
+  }
+}

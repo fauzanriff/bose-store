@@ -1,0 +1,133 @@
+.my-popover{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(#000000, 0.6);
+
+  &__container{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: $box-shadow-reg;
+  }
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 300px;
+
+    &--left{
+      padding: 30px 0;
+      justify-content: center;
+    }
+
+    &--right{
+      padding: 30px 50px;
+    }
+  }
+
+  &__tag{
+    top: 20px;
+    position: absolute;
+    background-color: $card-tag-color;
+    color: #555555;
+    font-size: 75%;
+    font-weight: bold;
+    padding: 10px 20px 10px 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: $box-shadow-reg;
+  }
+
+  &__title{
+    font-size: 150%;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  &__price{
+    font-weight: normal;
+    padding: 0 5px;
+    font-size: 120%;
+  }
+
+  &__description{
+    font-weight: 300;
+    color: #777777;
+    padding: 15px 5px;
+  }
+
+  &__tab{
+    padding: 5px;
+
+    &__label{
+      display: flex;
+
+      &__item{
+        margin-right: 20px;
+        font-size: 80%;
+        font-weight: normal;
+        color: #DDDDDD;
+
+        &.active{
+          border-bottom: 3px solid $card-tag-color;
+          color: #444444;
+        }
+
+        &:hover{
+          border-bottom: 3px solid rgba($card-tag-color, 0.5);
+          cursor: pointer;
+          color: #AAAAAA;
+        }
+      }
+    }
+
+    &__content{
+      padding: 10px 0;
+      border-bottom: 1px solid #EEE;
+      border-top: 1px solid #EEE;
+      position: relative;
+      top: -2px;
+
+      &__item{
+        display: none;
+        font-size: 75%;
+        font-weight: 300;
+
+        &.active{
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__list{
+    &__item{
+      padding: 5px 0;
+
+      &__text{
+        padding: 0 10px;
+      }
+
+      i::before{
+        color: $green-color;
+      }
+    }
+  }
+
+  &__carousel{
+    &__image{
+      display: none;
+      width: 100%;
+
+      &.active{
+        display: block;
+      }
+    }
+  }
+}
