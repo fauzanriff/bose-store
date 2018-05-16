@@ -38,15 +38,15 @@
             <div class="my-popover__body">
               <div class="my-popover__tab">
                 <div class="my-popover__tab__label">
-                  <div class="my-popover__tab__label__item active">
+                  <div class="my-popover__tab__label__item active my-tab-toggle" data-target="tabcontent1">
                     Specification
                   </div>
-                  <div class="my-popover__tab__label__item">
+                  <div class="my-popover__tab__label__item my-tab-toggle" data-target="tabcontent2">
                     Features
                   </div>
                 </div>
                 <div class="my-popover__tab__content">
-                  <div class="my-popover__tab__content__item active">
+                  <div id="tabcontent1" class="my-popover__tab__content__item active my-tab">
                     <div class="my-popover__list">
                       <div class="my-popover__list__item">
                         <i class="icon-check"></i> <span class="my-popover__list__item__text">Up to 8 hours playtime</span>
@@ -60,16 +60,16 @@
                     </div>
                   </div>
 
-                  <div class="my-popover__tab__content__item">
+                  <div id="tabcontent2" class="my-popover__tab__content__item my-tab">
                     <div class="my-popover__list">
                       <div class="my-popover__list__item">
-                        <i class="icon-check"></i> Bumpers for bumping
+                        <i class="icon-check"></i> <span class="my-popover__list__item__text">Bumpers for bumping</span>
                       </div>
                       <div class="my-popover__list__item">
-                        <i class="icon-check"></i> All sound. No seam.
+                        <i class="icon-check"></i> <span class="my-popover__list__item__text">All sound. No seam.</span>
                       </div>
                       <div class="my-popover__list__item">
-                        <i class="icon-check"></i> Grab and go.
+                        <i class="icon-check"></i> <span class="my-popover__list__item__text">Grab and go.</span>
                       </div>
                     </div>
                   </div>
@@ -80,11 +80,16 @@
                 <div class="my-popover__colorpick__label">
                   Choose your colors
                 </div>
-                <div class="my-popover__colorpick__dots">
+                <form class="my-popover__colorpick__form">
+                  <input class="my-radio grey" type="radio" name="colorpick" value="grey" checked>
+                  <input class="my-radio black" type="radio" name="colorpick" value="black">
+                  <input class="my-radio gold" type="radio" name="colorpick" value="gold">
+                </form>
+                <!-- <div class="my-popover__colorpick__dots">
                   <i class="my-popover__colorpick__dotclick my-popover__colorpick__icondot icon-check"></i>
                   <div class="my-popover__colorpick__dotclick my-popover__colorpick__dot black"><span class="my-popover__colorpick__dot__inner"></span></div>
                   <div class="my-popover__colorpick__dotclick my-popover__colorpick__dot gold"><span class="my-popover__colorpick__dot__inner"></span></div>
-                </div>
+                </div> -->
               </div>
 
               <div class="my-list">
@@ -118,7 +123,7 @@
         </div>
         <div class="my-card__foot">
           <div class="my-card__action">
-            <div data-target="popover1" class="my-card__action__button my-card__action__icon my-popover-toggle"><i class="icon-quicklook"></i></div>
+            <div class="my-card__action__button my-card__action__icon my-popover-toggle" data-target="popover1"><i class="icon-quicklook"></i></div>
             <div class="my-card__action__button my-card__action__price">$ 199</div>
           </div>
         </div>
@@ -135,7 +140,7 @@
         </div>
         <div class="my-card__foot">
           <div class="my-card__action">
-            <div data-target="popover2" class="my-card__action__button my-card__action__icon my-popover-toggle"><i class="icon-quicklook"></i></div>
+            <div class="my-card__action__button my-card__action__icon my-popover-toggle" data-target="popover2"><i class="icon-quicklook"></i></div>
             <div class="my-card__action__button my-card__action__price">$ 199</div>
           </div>
         </div>

@@ -204,6 +204,49 @@ body {
           display: block; }
   .my-popover__colorpick {
     padding: 5px; }
+    .my-popover__colorpick__form {
+      display: flex;
+      padding: 10px 0;
+      border-bottom: 1px solid #EEEEEE; }
+      .my-popover__colorpick__form .my-radio {
+        margin: 0 10px; }
+        .my-popover__colorpick__form .my-radio:hover {
+          cursor: pointer; }
+          .my-popover__colorpick__form .my-radio:hover[type='radio']:after {
+            border: 2px solid #888888; }
+        .my-popover__colorpick__form .my-radio[type='radio']:after {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
+          opacity: 0.75; }
+        .my-popover__colorpick__form .my-radio.grey[type='radio']:after {
+          background-color: #DDDDDD; }
+        .my-popover__colorpick__form .my-radio.black[type='radio']:after {
+          background-color: #333333; }
+        .my-popover__colorpick__form .my-radio.gold[type='radio']:after {
+          background-color: #d6ba75; }
+      .my-popover__colorpick__form .my-radio[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        font-family: 'blicon' !important;
+        font-size: 17px;
+        color: #FFFFFF;
+        content: "\62";
+        display: inline-block;
+        visibility: visible;
+        opacity: 1; }
     .my-popover__colorpick__dots {
       display: flex;
       padding: 10px 0;

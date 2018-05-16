@@ -116,6 +116,66 @@
   &__colorpick{
     padding: 5px;
 
+    &__form{
+      display: flex;
+      padding: 10px 0;
+      border-bottom: 1px solid #EEEEEE;
+
+      .my-radio{
+        margin: 0 10px;
+
+        &:hover{
+          cursor: pointer;
+          &[type='radio']:after {
+            border: 2px solid #888888;
+          }
+        }
+
+        &[type='radio']:after {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
+          opacity: 0.75;
+        }
+
+        &.grey[type='radio']:after{
+          background-color: #DDDDDD;
+        }
+
+        &.black[type='radio']:after{
+          background-color: #333333;
+        }
+
+        &.gold[type='radio']:after{
+          background-color: $gold-color;
+        }
+      }
+
+      .my-radio[type='radio']:checked:after {
+          width: 15px;
+          height: 15px;
+          border: 2px solid #FFFFFF;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          font-family: 'blicon' !important;
+          font-size: 17px;
+          color: #FFFFFF;
+          content: "\62";
+          display: inline-block;
+          visibility: visible;
+          opacity: 1;
+      }
+    }
+
     &__dots{
       display: flex;
       padding: 10px 0;
