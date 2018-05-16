@@ -133,6 +133,8 @@ body {
   position: absolute;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.6); }
+  .my-popover.hide {
+    display: none; }
   .my-popover__container {
     background-color: #FFFFFF;
     border-radius: 15px;
@@ -149,7 +151,7 @@ body {
     .my-popover__inner--right {
       padding: 30px 50px; }
   .my-popover__tag {
-    top: 20px;
+    top: 50px;
     position: absolute;
     background-color: #FFEB3B;
     color: #555555;
@@ -171,13 +173,14 @@ body {
     font-weight: 300;
     color: #777777;
     padding: 15px 5px; }
+  .my-popover__body {
+    font-size: 80%; }
   .my-popover__tab {
     padding: 5px; }
     .my-popover__tab__label {
       display: flex; }
       .my-popover__tab__label__item {
         margin-right: 20px;
-        font-size: 80%;
         font-weight: normal;
         color: #DDDDDD; }
         .my-popover__tab__label__item.active {
@@ -195,12 +198,55 @@ body {
       top: -2px; }
       .my-popover__tab__content__item {
         display: none;
-        font-size: 75%;
+        font-size: 90%;
         font-weight: 300; }
         .my-popover__tab__content__item.active {
           display: block; }
+  .my-popover__colorpick {
+    padding: 5px; }
+    .my-popover__colorpick__dots {
+      display: flex;
+      padding: 10px 0;
+      border-bottom: 1px solid #EEEEEE; }
+    .my-popover__colorpick__icondot {
+      font-size: 16px;
+      margin-right: 5px;
+      background-color: #BBBBBB;
+      border-radius: 50px; }
+      .my-popover__colorpick__icondot::before {
+        color: #FFFFFF; }
+    .my-popover__colorpick__dotclick:hover {
+      cursor: pointer; }
+    .my-popover__colorpick__dot {
+      display: flex;
+      padding: 4px;
+      border: 1px solid #333;
+      border-radius: 50px;
+      margin-right: 5px; }
+      .my-popover__colorpick__dot:last-child {
+        margin-right: 0; }
+      .my-popover__colorpick__dot__inner {
+        height: 6px;
+        width: 6px;
+        background-color: #EEEEEE;
+        border-radius: 50px; }
+      .my-popover__colorpick__dot:hover {
+        padding: 2px; }
+        .my-popover__colorpick__dot:hover .my-popover__colorpick__dot__inner {
+          height: 10px;
+          width: 10px; }
+      .my-popover__colorpick__dot.black {
+        border-color: #333; }
+        .my-popover__colorpick__dot.black .my-popover__colorpick__dot__inner {
+          background-color: #333; }
+      .my-popover__colorpick__dot.gold {
+        border-color: #d6ba75; }
+        .my-popover__colorpick__dot.gold .my-popover__colorpick__dot__inner {
+          background-color: #d6ba75; }
   .my-popover__list__item {
-    padding: 5px 0; }
+    padding: 5px 0;
+    display: flex;
+    align-items: center; }
     .my-popover__list__item__text {
       padding: 0 10px; }
     .my-popover__list__item i::before {
@@ -210,5 +256,53 @@ body {
     width: 100%; }
     .my-popover__carousel__image.active {
       display: block; }
+  .my-popover__foot {
+    padding: 25px 5px 10px 5px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #EEEEEE; }
+  .my-popover__action {
+    display: flex;
+    color: #6c6c6c;
+    border-radius: 50px;
+    background-color: #333333; }
+    .my-popover__action__button {
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      transition: background-color 0.5s ease;
+      border-right: 1px solid #BBBBBB;
+      font-weight: bold;
+      font-size: 80%; }
+      .my-popover__action__button:last-child {
+        border-right: 0; }
+    .my-popover__action__icon {
+      padding: 8px 10px 8px 12px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px; }
+      .my-popover__action__icon i::before {
+        color: #FFFFFF; }
+    .my-popover__action__label {
+      padding: 8px 15px 8px 10px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-left: 0; }
+      .my-popover__action__label:hover {
+        cursor: pointer;
+        background-color: #595959; }
+
+.my-list {
+  padding: 5px;
+  font-weight: 300; }
+  .my-list__item {
+    padding: 5px 0;
+    display: flex;
+    align-items: center; }
+    .my-list__item__text {
+      padding: 0 10px;
+      font-size: 90%; }
+    .my-list__item i::before {
+      color: #66BB6A; }
 
 /*# sourceMappingURL=styles.css.map */

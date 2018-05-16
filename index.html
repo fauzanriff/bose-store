@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="my-card__container">
-      <div class="my-popover">
+      <div id="popover1" class="my-popover hide">
         <div class="my-popover__container">
           <div class="my-popover__inner my-popover__inner--left">
             <div class="my-popover__tag">
@@ -80,15 +80,28 @@
                 <div class="my-popover__colorpick__label">
                   Choose your colors
                 </div>
-                <div class="my-popover__colorpick__colors">
-                  <div class="my-popover__colorpick">
+                <div class="my-popover__colorpick__dots">
+                  <i class="my-popover__colorpick__dotclick my-popover__colorpick__icondot icon-check"></i>
+                  <div class="my-popover__colorpick__dotclick my-popover__colorpick__dot black"><span class="my-popover__colorpick__dot__inner"></span></div>
+                  <div class="my-popover__colorpick__dotclick my-popover__colorpick__dot gold"><span class="my-popover__colorpick__dot__inner"></span></div>
+                </div>
+              </div>
 
-                  </div>
+              <div class="my-list">
+                <div class="my-list__item">
+                  <i class="icon-check"></i> <span class="my-list__item__text">Free shipping & returns + 2 years warranty</span>
                 </div>
               </div>
             </div>
             <div class="my-popover__foot">
-
+              <div class="my-popover__action">
+                <div class="my-popover__action__button my-popover__action__icon">
+                  <i class="icon-cart"></i>
+                </div>
+                <div class="my-popover__action__button my-popover__action__label">
+                  BUY NOW
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -105,12 +118,30 @@
         </div>
         <div class="my-card__foot">
           <div class="my-card__action">
-            <div class="my-card__action__button my-card__action__icon"><i class="icon-quicklook"></i></div>
+            <div data-target="popover1" class="my-card__action__button my-card__action__icon my-popover-toggle"><i class="icon-quicklook"></i></div>
+            <div class="my-card__action__button my-card__action__price">$ 199</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-card space">
+        <div class="my-card__head">
+          <div class="my-card__tag">BESTSELLER</div>
+          <img src="assets/image.jpg" class="my-card__image" />
+        </div>
+        <div class="my-card__body">
+          <div class="my-card__title">Bose SoundLink</div>
+          <div class="my-card__description">Little speaker. Big goosebumps.</div>
+        </div>
+        <div class="my-card__foot">
+          <div class="my-card__action">
+            <div data-target="popover2" class="my-card__action__button my-card__action__icon my-popover-toggle"><i class="icon-quicklook"></i></div>
             <div class="my-card__action__button my-card__action__price">$ 199</div>
           </div>
         </div>
       </div>
 
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

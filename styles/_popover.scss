@@ -8,6 +8,10 @@
   z-index: 10;
   background-color: rgba(#000000, 0.6);
 
+  &.hide{
+    display: none;
+  }
+
   &__container{
     background-color: #FFFFFF;
     border-radius: 15px;
@@ -32,7 +36,7 @@
   }
 
   &__tag{
-    top: 20px;
+    top: 50px;
     position: absolute;
     background-color: $card-tag-color;
     color: #555555;
@@ -62,6 +66,10 @@
     padding: 15px 5px;
   }
 
+  &__body{
+    font-size: 80%;
+  }
+
   &__tab{
     padding: 5px;
 
@@ -70,7 +78,6 @@
 
       &__item{
         margin-right: 20px;
-        font-size: 80%;
         font-weight: normal;
         color: #DDDDDD;
 
@@ -96,7 +103,7 @@
 
       &__item{
         display: none;
-        font-size: 75%;
+        font-size: 90%;
         font-weight: 300;
 
         &.active{
@@ -106,9 +113,82 @@
     }
   }
 
+  &__colorpick{
+    padding: 5px;
+
+    &__dots{
+      display: flex;
+      padding: 10px 0;
+      border-bottom: 1px solid #EEEEEE;
+    }
+
+    &__icondot{
+      font-size: 16px;
+      margin-right: 5px;
+      background-color: #BBBBBB;
+      border-radius: 50px;
+
+      &::before{
+        color: #FFFFFF;
+      }
+    }
+
+    &__dotclick{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    &__dot{
+      display: flex;
+      padding: 4px;
+      border: 1px solid #333;
+      border-radius: 50px;
+      margin-right: 5px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &__inner{
+        height: 6px;
+        width: 6px;
+        background-color: #EEEEEE;
+        border-radius: 50px;
+      }
+
+      &:hover{
+        padding: 2px;
+
+        .my-popover__colorpick__dot__inner{
+          height: 10px;
+          width: 10px;
+        }
+      }
+
+      &.black{
+        border-color: #333;
+
+        .my-popover__colorpick__dot__inner{
+          background-color: #333;
+        }
+      }
+
+      &.gold{
+        border-color: $gold-color;
+
+        .my-popover__colorpick__dot__inner{
+          background-color: $gold-color;
+        }
+      }
+    }
+  }
+
   &__list{
     &__item{
       padding: 5px 0;
+      display: flex;
+      align-items: center;
 
       &__text{
         padding: 0 10px;
@@ -128,6 +208,78 @@
       &.active{
         display: block;
       }
+    }
+  }
+
+  &__foot{
+    padding: 25px 5px 10px 5px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #EEEEEE;
+  }
+
+  &__action{
+    display: flex;
+    color: $card-text-color-light;
+    // border: 1px solid $card-border-color-light;
+    border-radius: 50px;
+    background-color: #333333;
+
+    &__button{
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      transition: background-color 0.5s ease;
+      border-right: 1px solid $card-border-color-light;
+      font-weight: bold;
+      font-size: 80%;
+
+      &:last-child{
+        border-right: 0;
+      }
+    }
+
+    &__icon{
+      padding: 8px 10px 8px 12px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+
+      i::before{
+        color: #FFFFFF;
+      }
+    }
+
+    &__label{
+      padding: 8px 15px 8px 10px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-left: 0;
+
+      &:hover{
+        cursor: pointer;
+        background-color: lighten(#333333, 15%);
+      }
+    }
+  }
+}
+
+.my-list{
+  padding: 5px;
+  font-weight: 300;
+
+  &__item{
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+
+    &__text{
+      padding: 0 10px;
+      font-size: 90%;
+    }
+
+    i::before{
+      color: $green-color;
     }
   }
 }
