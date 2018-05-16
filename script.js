@@ -1,4 +1,3 @@
-
 function openTargetPopOver (e) {
   // Get target popover
   var target = e.target.getAttribute("data-target");
@@ -22,6 +21,7 @@ function closeTargetPopOver (e) {
   }
 }
 
+// remove all 'active' class siblings with $className and add 'active' class on $target
 function diactivateClass(target, className){
   // get all items
   var items = Array.from(target.getElementsByClassName(className));

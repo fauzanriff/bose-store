@@ -5,110 +5,214 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="my-card__container">
-      <div id="popover1" class="my-popover hide">
-        <div class="my-popover__container">
-          <div class="my-popover__inner my-popover__inner--left">
-            <div class="my-popover__tag">
-              BESTSELLER
+
+    <div id="popover1" class="my-popover hide">
+      <div class="my-popover__container">
+        <div class="my-popover__inner my-popover__inner--left">
+          <div class="my-popover__tag">
+            BESTSELLER
+          </div>
+          <div class="my-popover__carousel">
+            <img id="carouselImage1" src="assets/image.jpg" class="my-popover__carousel__image active" />
+            <img id="carouselImage2" src="assets/image2.jpg" class="my-popover__carousel__image" />
+            <img id="carouselImage3" src="assets/image3.jpg" class="my-popover__carousel__image" />
+          </div>
+          <div class="my-popover__carousel-navigation">
+            <div class="my-popover__carousel__dots">
+              <div class="my-popover__carousel__dotclick active my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage1"><span class="my-popover__carousel__dot__inner"></span></div>
+              <div class="my-popover__carousel__dotclick my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage2"><span class="my-popover__carousel__dot__inner"></span></div>
+              <div class="my-popover__carousel__dotclick my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage3"><span class="my-popover__carousel__dot__inner"></span></div>
             </div>
-            <div class="my-popover__carousel">
-              <img id="carouselImage1" src="assets/image.jpg" class="my-popover__carousel__image active" />
-              <img id="carouselImage2" src="assets/image2.jpg" class="my-popover__carousel__image" />
-              <img id="carouselImage3" src="assets/image3.jpg" class="my-popover__carousel__image" />
+          </div>
+        </div>
+        <div class="my-popover__inner my-popover__inner--right">
+          <div class="my-popover__head">
+            <div class="my-popover__title">
+              Bose SoundLink
             </div>
-            <div class="my-popover__carousel-navigation">
-              <div class="my-popover__carousel__dots">
-                <div class="my-popover__carousel__dotclick active my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage1"><span class="my-popover__carousel__dot__inner"></span></div>
-                <div class="my-popover__carousel__dotclick my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage2"><span class="my-popover__carousel__dot__inner"></span></div>
-                <div class="my-popover__carousel__dotclick my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage3"><span class="my-popover__carousel__dot__inner"></span></div>
+            <div class="my-popover__price">
+              $ 199
+            </div>
+            <div class="my-popover__description">
+              Wireless earphones for music lovers who live to move.
+            </div>
+          </div>
+          <div class="my-popover__body">
+            <div class="my-popover__tab">
+              <div class="my-popover__tab__label">
+                <div class="my-popover__tab__label__item active my-tab-toggle" data-target="tabcontent1">
+                  Specification
+                </div>
+                <div class="my-popover__tab__label__item my-tab-toggle" data-target="tabcontent2">
+                  Features
+                </div>
+              </div>
+              <div class="my-popover__tab__content">
+                <div id="tabcontent1" class="my-popover__tab__content__item active my-tab">
+                  <div class="my-popover__list">
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Up to 8 hours playtime</span>
+                    </div>
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Powerfull sound</span>
+                    </div>
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Wireless earphones</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="tabcontent2" class="my-popover__tab__content__item my-tab">
+                  <div class="my-popover__list">
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Bumpers for bumping</span>
+                    </div>
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">All sound. No seam.</span>
+                    </div>
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Grab and go.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-popover__colorpick">
+              <div class="my-popover__colorpick__label">
+                Choose your colors
+              </div>
+              <form class="my-popover__colorpick__form">
+                <input class="my-radio grey" type="radio" name="colorpick" value="grey" checked>
+                <input class="my-radio black" type="radio" name="colorpick" value="black">
+                <input class="my-radio gold" type="radio" name="colorpick" value="gold">
+              </form>
+            </div>
+
+            <div class="my-list">
+              <div class="my-list__item">
+                <i class="icon-check"></i> <span class="my-list__item__text">Free shipping & returns + 2 years warranty</span>
               </div>
             </div>
           </div>
-          <div class="my-popover__inner my-popover__inner--right">
-            <div class="my-popover__head">
-              <div class="my-popover__title">
-                Bose SoundLink
+          <div class="my-popover__foot">
+            <div class="my-popover__action">
+              <div class="my-popover__action__button my-popover__action__icon">
+                <i class="icon-cart"></i>
               </div>
-              <div class="my-popover__price">
-                $ 199
-              </div>
-              <div class="my-popover__description">
-                Wireless earphones for music lovers who live to move.
-              </div>
-            </div>
-            <div class="my-popover__body">
-              <div class="my-popover__tab">
-                <div class="my-popover__tab__label">
-                  <div class="my-popover__tab__label__item active my-tab-toggle" data-target="tabcontent1">
-                    Specification
-                  </div>
-                  <div class="my-popover__tab__label__item my-tab-toggle" data-target="tabcontent2">
-                    Features
-                  </div>
-                </div>
-                <div class="my-popover__tab__content">
-                  <div id="tabcontent1" class="my-popover__tab__content__item active my-tab">
-                    <div class="my-popover__list">
-                      <div class="my-popover__list__item">
-                        <i class="icon-check"></i> <span class="my-popover__list__item__text">Up to 8 hours playtime</span>
-                      </div>
-                      <div class="my-popover__list__item">
-                        <i class="icon-check"></i> <span class="my-popover__list__item__text">Powerfull sound</span>
-                      </div>
-                      <div class="my-popover__list__item">
-                        <i class="icon-check"></i> <span class="my-popover__list__item__text">Wireless earphones</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div id="tabcontent2" class="my-popover__tab__content__item my-tab">
-                    <div class="my-popover__list">
-                      <div class="my-popover__list__item">
-                        <i class="icon-check"></i> <span class="my-popover__list__item__text">Bumpers for bumping</span>
-                      </div>
-                      <div class="my-popover__list__item">
-                        <i class="icon-check"></i> <span class="my-popover__list__item__text">All sound. No seam.</span>
-                      </div>
-                      <div class="my-popover__list__item">
-                        <i class="icon-check"></i> <span class="my-popover__list__item__text">Grab and go.</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="my-popover__colorpick">
-                <div class="my-popover__colorpick__label">
-                  Choose your colors
-                </div>
-                <form class="my-popover__colorpick__form">
-                  <input class="my-radio grey" type="radio" name="colorpick" value="grey" checked>
-                  <input class="my-radio black" type="radio" name="colorpick" value="black">
-                  <input class="my-radio gold" type="radio" name="colorpick" value="gold">
-                </form>
-              </div>
-
-              <div class="my-list">
-                <div class="my-list__item">
-                  <i class="icon-check"></i> <span class="my-list__item__text">Free shipping & returns + 2 years warranty</span>
-                </div>
-              </div>
-            </div>
-            <div class="my-popover__foot">
-              <div class="my-popover__action">
-                <div class="my-popover__action__button my-popover__action__icon">
-                  <i class="icon-cart"></i>
-                </div>
-                <div class="my-popover__action__button my-popover__action__label">
-                  BUY NOW
-                </div>
+              <div class="my-popover__action__button my-popover__action__label">
+                BUY NOW
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
+    <div id="popover2" class="my-popover hide">
+      <div class="my-popover__container">
+        <div class="my-popover__inner my-popover__inner--left">
+          <div class="my-popover__tag">
+            BESTSELLER
+          </div>
+          <div class="my-popover__carousel">
+            <img id="kulkasImage1" src="assets/kulkas.webp" class="my-popover__carousel__image active" />
+            <img id="kulkasImage2" src="assets/kulkas2.webp" class="my-popover__carousel__image" />
+            <img id="kulkasImage3" src="assets/kulkas3.webp" class="my-popover__carousel__image" />
+          </div>
+          <div class="my-popover__carousel-navigation">
+            <div class="my-popover__carousel__dots">
+              <div class="my-popover__carousel__dotclick active my-popover__carousel__dot my-carousel-toggle" data-target="kulkasImage1"><span class="my-popover__carousel__dot__inner"></span></div>
+              <div class="my-popover__carousel__dotclick my-popover__carousel__dot my-carousel-toggle" data-target="kulkasImage2"><span class="my-popover__carousel__dot__inner"></span></div>
+              <div class="my-popover__carousel__dotclick my-popover__carousel__dot my-carousel-toggle" data-target="kulkasImage3"><span class="my-popover__carousel__dot__inner"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="my-popover__inner my-popover__inner--right">
+          <div class="my-popover__head">
+            <div class="my-popover__title">
+              Bose Washing Machine
+            </div>
+            <div class="my-popover__price">
+              $ 349
+            </div>
+            <div class="my-popover__description">
+              Love your washing moment everyday.
+            </div>
+          </div>
+          <div class="my-popover__body">
+            <div class="my-popover__tab">
+              <div class="my-popover__tab__label">
+                <div class="my-popover__tab__label__item active my-tab-toggle" data-target="tabkulkas1">
+                  Specification
+                </div>
+                <div class="my-popover__tab__label__item my-tab-toggle" data-target="tabkulkas2">
+                  Features
+                </div>
+              </div>
+              <div class="my-popover__tab__content">
+                <div id="tabkulkas1" class="my-popover__tab__content__item active my-tab">
+                  <div class="my-popover__list">
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Up to 12 hours non-stop washing</span>
+                    </div>
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Powerfull rotation</span>
+                    </div>
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Pipeless water</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="tabkulkas2" class="my-popover__tab__content__item my-tab">
+                  <div class="my-popover__list">
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Bumpers for washing</span>
+                    </div>
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">No sound. But clean.</span>
+                    </div>
+                    <div class="my-popover__list__item">
+                      <i class="icon-check"></i> <span class="my-popover__list__item__text">Put and go.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-popover__colorpick">
+              <div class="my-popover__colorpick__label">
+                Choose your colors
+              </div>
+              <form class="my-popover__colorpick__form">
+                <input class="my-radio grey" type="radio" name="colorpick" value="grey" checked>
+                <input class="my-radio black" type="radio" name="colorpick" value="black">
+                <input class="my-radio gold" type="radio" name="colorpick" value="gold">
+              </form>
+            </div>
+
+            <div class="my-list">
+              <div class="my-list__item">
+                <i class="icon-check"></i> <span class="my-list__item__text">Free shipping & returns + 2 years warranty</span>
+              </div>
+            </div>
+          </div>
+          <div class="my-popover__foot">
+            <div class="my-popover__action">
+              <div class="my-popover__action__button my-popover__action__icon">
+                <i class="icon-cart"></i>
+              </div>
+              <div class="my-popover__action__button my-popover__action__label">
+                BUY NOW
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-card__container">
       <div class="my-card space">
         <div class="my-card__head">
           <div class="my-card__tag">BESTSELLER</div>
@@ -129,16 +233,16 @@
       <div class="my-card space">
         <div class="my-card__head">
           <div class="my-card__tag">BESTSELLER</div>
-          <img src="assets/image.jpg" class="my-card__image" />
+          <img src="assets/kulkas.webp" class="my-card__image" />
         </div>
         <div class="my-card__body">
-          <div class="my-card__title">Bose SoundLink</div>
-          <div class="my-card__description">Little speaker. Big goosebumps.</div>
+          <div class="my-card__title">Bose Washing Machine</div>
+          <div class="my-card__description">Little machine. Big clean.</div>
         </div>
         <div class="my-card__foot">
           <div class="my-card__action">
             <div class="my-card__action__button my-card__action__icon my-popover-toggle" data-target="popover2"><i class="icon-quicklook"></i></div>
-            <div class="my-card__action__button my-card__action__price">$ 199</div>
+            <div class="my-card__action__button my-card__action__price">$ 349</div>
           </div>
         </div>
       </div>
