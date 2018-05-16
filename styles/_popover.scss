@@ -113,6 +113,77 @@
     }
   }
 
+  &__carousel-navigation{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+  }
+
+  &__carousel{
+
+    &__image{
+      display: none;
+      width: 100%;
+
+      &.active{
+        display: block;
+      }
+    }
+    
+    &__dots{
+      display: flex;
+      padding: 10px 0;
+      justify-content: center;
+    }
+
+    &__icondot{
+      font-size: 16px;
+      margin-right: 5px;
+      border-radius: 50px;
+
+      &::before{
+        color: #FFFFFF;
+      }
+    }
+
+    &__dotclick{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    &__dot{
+      display: flex;
+      padding: 2px;
+      border: 1px solid #333;
+      border-radius: 50px;
+      margin-right: 5px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &__inner{
+        height: 10px;
+        width: 10px;
+        border-radius: 50px;
+      }
+
+      &:hover{
+        .my-popover__carousel__dot__inner{
+          background-color: #CCCCCC;
+        }
+      }
+
+      &.active{
+        .my-popover__carousel__dot__inner{
+          background-color: #333;
+        }
+      }
+    }
+  }
+
   &__colorpick{
     padding: 5px;
 
@@ -167,79 +238,12 @@
           left: -1px;
           position: relative;
           font-family: 'blicon' !important;
-          font-size: 17px;
+          font-size: 16px;
           color: #FFFFFF;
           content: "\62";
           display: inline-block;
           visibility: visible;
           opacity: 1;
-      }
-    }
-
-    &__dots{
-      display: flex;
-      padding: 10px 0;
-      border-bottom: 1px solid #EEEEEE;
-    }
-
-    &__icondot{
-      font-size: 16px;
-      margin-right: 5px;
-      background-color: #BBBBBB;
-      border-radius: 50px;
-
-      &::before{
-        color: #FFFFFF;
-      }
-    }
-
-    &__dotclick{
-      &:hover{
-        cursor: pointer;
-      }
-    }
-
-    &__dot{
-      display: flex;
-      padding: 4px;
-      border: 1px solid #333;
-      border-radius: 50px;
-      margin-right: 5px;
-
-      &:last-child{
-        margin-right: 0;
-      }
-
-      &__inner{
-        height: 6px;
-        width: 6px;
-        background-color: #EEEEEE;
-        border-radius: 50px;
-      }
-
-      &:hover{
-        padding: 2px;
-
-        .my-popover__colorpick__dot__inner{
-          height: 10px;
-          width: 10px;
-        }
-      }
-
-      &.black{
-        border-color: #333;
-
-        .my-popover__colorpick__dot__inner{
-          background-color: #333;
-        }
-      }
-
-      &.gold{
-        border-color: $gold-color;
-
-        .my-popover__colorpick__dot__inner{
-          background-color: $gold-color;
-        }
       }
     }
   }
@@ -256,17 +260,6 @@
 
       i::before{
         color: $green-color;
-      }
-    }
-  }
-
-  &__carousel{
-    &__image{
-      display: none;
-      width: 100%;
-
-      &.active{
-        display: block;
       }
     }
   }

@@ -13,14 +13,16 @@
               BESTSELLER
             </div>
             <div class="my-popover__carousel">
-              <img src="assets/image.jpg" class="my-popover__carousel__image active" />
-              <img src="assets/image.jpg" class="my-popover__carousel__image" />
-              <img src="assets/image.jpg" class="my-popover__carousel__image" />
+              <img id="carouselImage1" src="assets/image.jpg" class="my-popover__carousel__image active" />
+              <img id="carouselImage2" src="assets/image2.jpg" class="my-popover__carousel__image" />
+              <img id="carouselImage3" src="assets/image3.jpg" class="my-popover__carousel__image" />
             </div>
             <div class="my-popover__carousel-navigation">
-              <div class="my-popover__carousel-navigation__dot active"></div>
-              <div class="my-popover__carousel-navigation__dot"></div>
-              <div class="my-popover__carousel-navigation__dot"></div>
+              <div class="my-popover__carousel__dots">
+                <div class="my-popover__carousel__dotclick active my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage1"><span class="my-popover__carousel__dot__inner"></span></div>
+                <div class="my-popover__carousel__dotclick my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage2"><span class="my-popover__carousel__dot__inner"></span></div>
+                <div class="my-popover__carousel__dotclick my-popover__carousel__dot my-carousel-toggle" data-target="carouselImage3"><span class="my-popover__carousel__dot__inner"></span></div>
+              </div>
             </div>
           </div>
           <div class="my-popover__inner my-popover__inner--right">
@@ -85,11 +87,6 @@
                   <input class="my-radio black" type="radio" name="colorpick" value="black">
                   <input class="my-radio gold" type="radio" name="colorpick" value="gold">
                 </form>
-                <!-- <div class="my-popover__colorpick__dots">
-                  <i class="my-popover__colorpick__dotclick my-popover__colorpick__icondot icon-check"></i>
-                  <div class="my-popover__colorpick__dotclick my-popover__colorpick__dot black"><span class="my-popover__colorpick__dot__inner"></span></div>
-                  <div class="my-popover__colorpick__dotclick my-popover__colorpick__dot gold"><span class="my-popover__colorpick__dot__inner"></span></div>
-                </div> -->
               </div>
 
               <div class="my-list">

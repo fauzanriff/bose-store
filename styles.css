@@ -202,6 +202,44 @@ body {
         font-weight: 300; }
         .my-popover__tab__content__item.active {
           display: block; }
+  .my-popover__carousel-navigation {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0; }
+  .my-popover__carousel__image {
+    display: none;
+    width: 100%; }
+    .my-popover__carousel__image.active {
+      display: block; }
+  .my-popover__carousel__dots {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center; }
+  .my-popover__carousel__icondot {
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 50px; }
+    .my-popover__carousel__icondot::before {
+      color: #FFFFFF; }
+  .my-popover__carousel__dotclick:hover {
+    cursor: pointer; }
+  .my-popover__carousel__dot {
+    display: flex;
+    padding: 2px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    margin-right: 5px; }
+    .my-popover__carousel__dot:last-child {
+      margin-right: 0; }
+    .my-popover__carousel__dot__inner {
+      height: 10px;
+      width: 10px;
+      border-radius: 50px; }
+    .my-popover__carousel__dot:hover .my-popover__carousel__dot__inner {
+      background-color: #CCCCCC; }
+    .my-popover__carousel__dot.active .my-popover__carousel__dot__inner {
+      background-color: #333; }
   .my-popover__colorpick {
     padding: 5px; }
     .my-popover__colorpick__form {
@@ -241,51 +279,12 @@ body {
         left: -1px;
         position: relative;
         font-family: 'blicon' !important;
-        font-size: 17px;
+        font-size: 16px;
         color: #FFFFFF;
         content: "\62";
         display: inline-block;
         visibility: visible;
         opacity: 1; }
-    .my-popover__colorpick__dots {
-      display: flex;
-      padding: 10px 0;
-      border-bottom: 1px solid #EEEEEE; }
-    .my-popover__colorpick__icondot {
-      font-size: 16px;
-      margin-right: 5px;
-      background-color: #BBBBBB;
-      border-radius: 50px; }
-      .my-popover__colorpick__icondot::before {
-        color: #FFFFFF; }
-    .my-popover__colorpick__dotclick:hover {
-      cursor: pointer; }
-    .my-popover__colorpick__dot {
-      display: flex;
-      padding: 4px;
-      border: 1px solid #333;
-      border-radius: 50px;
-      margin-right: 5px; }
-      .my-popover__colorpick__dot:last-child {
-        margin-right: 0; }
-      .my-popover__colorpick__dot__inner {
-        height: 6px;
-        width: 6px;
-        background-color: #EEEEEE;
-        border-radius: 50px; }
-      .my-popover__colorpick__dot:hover {
-        padding: 2px; }
-        .my-popover__colorpick__dot:hover .my-popover__colorpick__dot__inner {
-          height: 10px;
-          width: 10px; }
-      .my-popover__colorpick__dot.black {
-        border-color: #333; }
-        .my-popover__colorpick__dot.black .my-popover__colorpick__dot__inner {
-          background-color: #333; }
-      .my-popover__colorpick__dot.gold {
-        border-color: #d6ba75; }
-        .my-popover__colorpick__dot.gold .my-popover__colorpick__dot__inner {
-          background-color: #d6ba75; }
   .my-popover__list__item {
     padding: 5px 0;
     display: flex;
@@ -294,11 +293,6 @@ body {
       padding: 0 10px; }
     .my-popover__list__item i::before {
       color: #66BB6A; }
-  .my-popover__carousel__image {
-    display: none;
-    width: 100%; }
-    .my-popover__carousel__image.active {
-      display: block; }
   .my-popover__foot {
     padding: 25px 5px 10px 5px;
     display: flex;

@@ -43,8 +43,27 @@ function openTargetTab (e){
   var targetTab = document.getElementById(target);
   // open target tab
   targetTab.classList.add("active");
-  // activate target __label
+  // activate target label
   e.target.classList.add("active");
+}
+
+function openCarouselImage (e){
+  var childClass = Array.from(e.target.classList);
+  var targetClass;
+  if (childClass.includes("my-carousel-toggle")){
+    targetClass = e.target;
+  }else{
+    targetClass =  e.target.parentNode;
+  }
+  diactivateClass(targetClass.parentNode.parentNode.parentNode, "my-popover__carousel__image"); // hide all image
+  diactivateClass(targetClass.parentNode, "my-carousel-toggle");           // hide all nav
+  // get target image
+  var target = targetClass.getAttribute("data-target");
+  var targetImage = document.getElementById(target);
+  // show target image
+  targetImage.classList.add("active");
+  // activate nav carousel
+  targetClass.classList.add("active");
 }
 
 // Add listener buttons
@@ -62,4 +81,9 @@ popovers.forEach(function(item, index){
 var tabToggles = Array.from(document.getElementsByClassName("my-tab-toggle"));
 tabToggles.forEach(function(item, index){
   item.addEventListener("click", openTargetTab);
+});
+// Listener for carousel
+var carouselNav = Array.from(document.getElementsByClassName("my-carousel-toggle"));
+carouselNav.forEach(function(item, index){
+  item.addEventListener("click", openCarouselImage);
 });
